@@ -8,7 +8,20 @@ Install Docker Desktop (Windows/macOS) or Docker Engine (Linux)
 
 ## Run the system
 
+### Clone the Repository
+
+```git
+git clone https://github.com/nganaremba-rem/face_authentication_sample.git
+```
+
+```bash
+cd face_authentication_sample
+```
+
+```bash
 docker compose up --build
+
+```
 
 ## Open the application
 
