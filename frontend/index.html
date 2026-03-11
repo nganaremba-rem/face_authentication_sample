@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Auth</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #1a1a2e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 16px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #e0e0ff;
+    }
+
+    .video-wrapper {
+      position: relative;
+      display: inline-block;
+      border: 2px solid #4444ff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    video {
+      display: block;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .tab {
+      padding: 8px 24px;
+      border: 2px solid #4444ff;
+      border-radius: 6px;
+      cursor: pointer;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    .tab.active {
+      background: #4444ff;
+    }
+
+    .panel {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .panel.active {
+      display: flex;
+    }
+
+    input {
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #4444ff;
+      background: #0f0f23;
+      color: white;
+      font-size: 1rem;
+      width: 260px;
+    }
+
+    button {
+      padding: 10px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4444ff;
+      color: white;
+      transition: background 0.2s;
+      width: 260px;
+    }
+
+    button:hover {
+      background: #2222cc;
+    }
+
+    button:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+
+    #result {
+      font-size: 1.1rem;
+      color: #aaffaa;
+      min-height: 28px;
+    }
+
+    .divider {
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Face Authentication</h2>
+  <div class="video-wrapper">
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('register')">Register</button>
+    <button class="tab" onclick="switchTab('login')">Login</button>
+  </div>
+  <div class="panel active" id="registerPanel">
+    <input id="regUser" type="text" placeholder="Username" />
+    <input id="regPass" type="password" placeholder="Password" />
+    <button id="registerBtn" onclick="register()">Register with Face</button>
+  </div>
+  <div class="panel" id="loginPanel">
+    <button id="faceLoginBtn" onclick="loginWithFace()">Login with Face</button>
+    <span class="divider">── or ──</span>
+    <input id="loginUser" type="text" placeholder="Username" />
+    <input id="loginPass" type="password" placeholder="Password" />
+    <button id="passLoginBtn" onclick="loginWithPassword()">Login with Password</button>
+  </div>
+  <p id="result">Loading models...</p>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
