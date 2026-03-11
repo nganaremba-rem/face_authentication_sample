@@ -24,7 +24,7 @@ docker compose build --no-cache
 ```
 
 ```bash
-docker compose up
+docker compose up -d
 
 ```
 
