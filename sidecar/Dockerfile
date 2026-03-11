@@ -2,7 +2,7 @@ FROM python:3.13.5
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y libgl1
+# RUN apt-get update && apt-get install -y libgl1
 
 COPY requirements.txt .
 
