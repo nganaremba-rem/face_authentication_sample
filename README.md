@@ -91,39 +91,6 @@ Starts all containers in the background.
 
 ---
 
-# 🛠️ Helpful Commands
-
-便利なコマンド
-
----
-
-## ⛔ Stop the System
-
-システムを停止する
-
-```bash
-docker compose down
-```
-
-Stops and removes the running containers.  
-実行中のコンテナを停止し、削除します。
-
----
-
-## 🔄 Restart the System
-
-システムを再起動する
-
-```bash
-docker compose down
-docker compose up
-```
-
-Stops the containers and then starts them again.  
-コンテナを停止した後、再度起動します。
-
----
-
 # 🌐 Open the Application
 
 アプリケーションを開く
@@ -166,5 +133,38 @@ Backend (Express) handles authentication logic.
 
 FastAPI sidecar handles liveness detection.  
 FastAPI サイドカーはライブネス検知を処理します。
+
+---
+
+# 🛠️ Helpful Commands
+
+便利なコマンド
+
+---
+
+## ⛔ Stop the System
+
+システムを停止する
+
+```bash
+docker compose down
+```
+
+Stops and removes the running containers.  
+実行中のコンテナを停止し、削除します。
+
+---
+
+## 🔄 Restart the System
+
+システムを再起動する
+
+```bash
+docker compose down
+docker compose up
+```
+
+Stops the containers and then starts them again.  
+コンテナを停止した後、再度起動します。
 
 ---
