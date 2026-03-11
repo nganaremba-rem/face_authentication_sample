@@ -2,9 +2,12 @@
 
 ## Requirements
 
-Install Docker Desktop (Windows/macOS) or Docker Engine (Linux)
+1. Install Docker Desktop (Windows/macOS) or Docker Engine (Linux)
 
 <https://www.docker.com/products/docker-desktop>
+
+1. Git
+   <https://git-scm.com/install/>
 
 ## Run the system
 
