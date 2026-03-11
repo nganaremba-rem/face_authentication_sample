@@ -2,7 +2,9 @@
 
 ## Requirements
 
-Install Docker and Docker Compose.
+Install Docker Desktop (Windows/macOS) or Docker Engine (Linux)
+
+<https://www.docker.com/products/docker-desktop>
 
 ## Run the system
 
@@ -19,5 +21,5 @@ Click **Advanced → Proceed to localhost**.
 ## Architecture
 
 Frontend (Vite) → <https://localhost:5173>
-Backend (Express) → <http://backend:3000>
-Liveness Detection (FastAPI sidecar) → <http://liveness:8000>
+Backend (Express) → <http://localhost:3000>
+Liveness Detection (FastAPI sidecar) → <http://localhost:8000>
